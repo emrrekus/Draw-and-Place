@@ -12,7 +12,7 @@ public class Socket : MonoBehaviour
    {
       if (Settle)
       {
-         
+         G
       }
    }
 }
