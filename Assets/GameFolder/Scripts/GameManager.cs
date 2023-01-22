@@ -1,18 +1,31 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Example1;
+using UnityEditor;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public DrawCreate[] _DrawCreates;
+
+    private GenaralManagement _genaralManagement;
+
+    private void Awake()
     {
-        
+        _genaralManagement = new(this);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            foreach (var item in _DrawCreates)
+            {
+                item.Begin();
+            }
+        }
     }
 }
+
+
