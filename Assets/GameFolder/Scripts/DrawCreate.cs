@@ -38,7 +38,7 @@ public class DrawCreate : MonoBehaviour
 
         _hit = Physics2D.Raycast(
            _camera.ScreenToViewportPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -10)), Vector2.zero);
-       if (_hit.collider == null)
+       if (_hit.collider != null)
        {
            if (_hit.collider.gameObject.CompareTag(_Tag) && !Draw && Input.GetMouseButtonDown(0))
            {
