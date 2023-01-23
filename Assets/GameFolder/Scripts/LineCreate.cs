@@ -11,7 +11,11 @@ public class LineCreate : MonoBehaviour
    public Socket _Socket;
 
    private int _HandPositionIndex;
+   private bool Draw;
    Camera _camera;
+   public string _Tag;
+
+   private RaycastHit2D _hit;
    private void Start()
    {
       _camera = Camera.main;
@@ -19,12 +23,13 @@ public class LineCreate : MonoBehaviour
 
    private void Update()
    {
-      if (Input.GetMouseButtonDown(0))
+      /*if (Input.GetMouseButtonDown(0)&& !Draw)
       {
          LineCreator();
-      }
+         Draw = true;
+      }*/
 
-      if (Input.GetMouseButton(0))
+      if (Input.GetMouseButton(0)&& Draw)
       {
          Vector2 HandPosition = _camera.ScreenToWorldPoint(Input.mousePosition);
 
@@ -32,6 +37,23 @@ public class LineCreate : MonoBehaviour
          {
             LineUpdate(HandPosition);
          }
+      }
+
+     _hit = Physics2D.Raycast(
+        _camera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -10)), Vector2.zero);
+
+     if (_hit.collider != null)
+     {
+        if (_hit.collider.gameObject.CompareTag(_Tag) && !Draw && Input.GetMouseButtonDown(0))
+        {
+           LineCreator();
+           Draw = true;
+        }
+     }
+
+      if (Input.GetMouseButtonUp(0)&& Draw)
+      {
+         enabled = false;
       }
    }
 
