@@ -30,9 +30,11 @@ public class Socket : MonoBehaviour
             if (Vector2.Distance(transform.position, _NestPosition) > .1f)
                 transform.position = Vector2.Lerp(transform.position, _NestPosition, .2f);
             else
+            {
                 transform.position = _NestPosition;
-
-            _Nest = false;
+                _Nest = false; 
+            }
+                
         }
     }
 
@@ -43,6 +45,8 @@ public class Socket : MonoBehaviour
             Debug.Log("Doğru" + _socketColor);
             _Nest = true;
             _NestPosition = _FinishNest.transform.position;
+            
+            GetComponent<CircleCollider2D>().enabled = false;
         }
         else if (col.CompareTag("Socket"))
         {
