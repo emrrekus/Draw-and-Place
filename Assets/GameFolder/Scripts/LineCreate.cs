@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
+using EKLibrary;
 using UnityEngine;
 
 public class LineCreate : MonoBehaviour
@@ -49,11 +50,22 @@ public class LineCreate : MonoBehaviour
            LineCreator();
            Draw = true;
         }
+
+        if (_hit.collider.CompareTag("Engel")&& Draw)
+        {
+           Draw = false;
+           General._GameManager.LineFinish();
+           
+        }
+           
      }
 
       if (Input.GetMouseButtonUp(0)&& Draw)
       {
          enabled = false;
+         Draw = false;
+         
+         General._GameManager.LineFinish();
       }
    }
 

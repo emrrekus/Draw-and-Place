@@ -9,27 +9,30 @@ public class GameManager : MonoBehaviour
 {
     public LineCreate[] _LineCreates;
     private General _general;
+    [SerializeField] private int _ToplamObjectCount;
 
     private void Awake()
     {
         _general = new General(this);
     }
 
-    private void Start()
+  
+
+    private void Begin()
     {
-        
+        foreach (var item in _LineCreates)
+        {
+            item.Begin();
+            
+        }
     }
 
-    private void Update()
+    public void LineFinish()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        _ToplamObjectCount--;
+        if (_ToplamObjectCount == 0)
         {
-            foreach (var item in _LineCreates)
-            {
-                item.Begin();
-            }
+            Begin();
         }
     }
 }
-
-
