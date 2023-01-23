@@ -8,6 +8,11 @@ TagManager:
   - Entry2
   - Entry3
   - Entry4
+  - Engel
+  - Green
+  - Orange
+  - Blue
+  - Socket
   layers:
   - Default
   - TransparentFX

@@ -45,7 +45,7 @@ public class Socket : MonoBehaviour
             Debug.Log("Doğru" + _socketColor);
             _Nest = true;
             _NestPosition = _FinishNest.transform.position;
-            
+            General._GameManager.SocketFinish();
             GetComponent<CircleCollider2D>().enabled = false;
         }
         else if (col.CompareTag("Socket"))

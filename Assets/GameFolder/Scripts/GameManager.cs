@@ -11,9 +11,12 @@ public class GameManager : MonoBehaviour
     private General _general;
     [SerializeField] private int _ToplamObjectCount;
 
+    private bool StartedTime;
+    private int _TotalSocketCount;
     private void Awake()
     {
         _general = new General(this);
+        _TotalSocketCount= _ToplamObjectCount;
     }
 
   
@@ -34,5 +37,36 @@ public class GameManager : MonoBehaviour
         {
             Begin();
         }
+    }
+    public void SocketFinish()
+    {
+        _TotalSocketCount--;
+        if (!StartedTime)
+        {
+            Invoke("SocketController",2f);
+            StartedTime = true;
+        }
+        if (_TotalSocketCount==0)
+        {
+            Win();
+        }
+    }
+
+    private void Win()
+    { 
+        Debug.Log("Winner");
+    }
+
+    void SocketController()
+    {
+        if (_TotalSocketCount!=0)
+        {
+            Lose();
+        }
+    }
+
+    private void Lose()
+    {
+        Debug.Log("Defeat");
     }
 }
