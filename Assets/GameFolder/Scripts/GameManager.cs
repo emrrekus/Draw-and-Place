@@ -19,6 +19,17 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            foreach (var item in _LineCreates)
+            {
+                item.Begin();
+            }
+        }
+    }
 }
 
 

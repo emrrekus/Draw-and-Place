@@ -44,8 +44,8 @@ public class LineCreate : MonoBehaviour
 
    private void LineCreator()
    {
-      HandPositionList.Add(_camera.ScreenToViewportPoint(Input.mousePosition));
-      HandPositionList.Add(_camera.ScreenToViewportPoint(Input.mousePosition));
+      HandPositionList.Add(_camera.ScreenToWorldPoint(Input.mousePosition));
+      HandPositionList.Add(_camera.ScreenToWorldPoint(Input.mousePosition));
       
       _LineRenderer.SetPosition(0,HandPositionList[0]);
       _LineRenderer.SetPosition(1,HandPositionList[1]);
@@ -69,5 +69,10 @@ public class LineCreate : MonoBehaviour
          return HandPositionList[_HandPositionIndex];
       }
      
+   }
+
+   public void Begin()
+   {
+      _Socket.Settle = true;
    }
 }

@@ -13,10 +13,10 @@ public class Socket : MonoBehaviour
     {
         if (Settle)
         {
-            if (Vector2.Distance(transform.position, General._GameManager._LineCreates[0].GiveLastPosition()) > .1f)
-                transform.position = Vector2.Lerp(transform.position,General._GameManager._LineCreates[0].GiveLastPosition(),.2f);
+            if (Vector2.Distance(transform.position, General._GameManager._LineCreates[LineIndex].GiveLastPosition()) > .1f)
+                transform.position = Vector2.Lerp(transform.position,General._GameManager._LineCreates[LineIndex].GiveLastPosition(),.2f);
             else
-                transform.position = Vector2.Lerp(transform.position,General._GameManager._LineCreates[0].GiveNextPosition(),.2f);
+                transform.position = Vector2.Lerp(transform.position,General._GameManager._LineCreates[LineIndex].GiveNextPosition(),.2f);
             
 
         }
