@@ -10,6 +10,7 @@ public class LineCreate : MonoBehaviour
    public List<Vector2> HandPositionList;
    public Socket _Socket;
 
+   private int _HandPositionIndex;
    Camera _camera;
    private void Start()
    {
@@ -48,5 +49,25 @@ public class LineCreate : MonoBehaviour
       
       _LineRenderer.SetPosition(0,HandPositionList[0]);
       _LineRenderer.SetPosition(1,HandPositionList[1]);
+   }
+
+   public Vector2 GiveLastPosition()
+   {
+      return HandPositionList[_HandPositionIndex];
+   }
+
+   public Vector2 GiveNextPosition()
+   {
+      if (_HandPositionIndex == HandPositionList.Count - 1)
+      {
+         _Socket.Settle = false;
+         return HandPositionList[_HandPositionIndex];
+      }
+      else
+      {
+         _HandPositionIndex++;
+         return HandPositionList[_HandPositionIndex];
+      }
+     
    }
 }
