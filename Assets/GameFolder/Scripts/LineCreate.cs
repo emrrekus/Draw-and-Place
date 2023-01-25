@@ -10,11 +10,12 @@ public class LineCreate : MonoBehaviour
    public LineRenderer _LineRenderer;
    public List<Vector2> HandPositionList;
    public Socket _Socket;
+   public string _Tag;
 
    private int _HandPositionIndex;
    private bool Draw;
    Camera _camera;
-   public string _Tag;
+  
 
    private RaycastHit2D _hit;
    private void Start()

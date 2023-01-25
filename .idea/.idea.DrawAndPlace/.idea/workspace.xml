@@ -4,6 +4,7 @@
     <list default="true" id="0ce4599a-5755-4013-ac00-09af63d2b560" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawAndPlace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawAndPlace/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Scripts/LineCreate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Scripts/LineCreate.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Socket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Socket.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +91,8 @@
       <workItem from="1674051975132" duration="4916000" />
       <workItem from="1674420522078" duration="4486000" />
       <workItem from="1674436681274" duration="506000" />
-      <workItem from="1674471300811" duration="11192000" />
+      <workItem from="1674471300811" duration="11525000" />
+      <workItem from="1674648778152" duration="918000" />
     </task>
     <servers />
   </component>

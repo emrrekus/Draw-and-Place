@@ -5,6 +5,31 @@ using EKLibrary;
 using UnityEditor;
 using UnityEngine;
 
+[Serializable]
+public class EntryObjects
+{
+    public GameObject _EntryObject;
+    public GameObject _SocketEntryPosition;
+
+
+}
+[Serializable]
+public class Sockets
+{
+    public Color _color;
+    public SpriteRenderer _SpriteRenderer;
+
+    [Header("----Soket Script İşlemleri")] 
+    public Socket _Socket;
+
+    public string _SocketColor;
+    public SpriteRenderer _FinishNestSpriyeRenderer;
+    public GameObject _FinishNestCenter;
+
+
+
+}
+
 public class GameManager : MonoBehaviour
 {
     public LineCreate[] _LineCreates;
@@ -13,6 +38,9 @@ public class GameManager : MonoBehaviour
 
     private bool StartedTime;
     private int _TotalSocketCount;
+
+    [SerializeField] private List<EntryObjects> _entryObjects;
+    [SerializeField] private List<Sockets> _sockets;
     private void Awake()
     {
         _general = new General(this);
