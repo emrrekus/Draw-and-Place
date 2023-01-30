@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0ce4599a-5755-4013-ac00-09af63d2b560" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DrawAndPlace/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DrawAndPlace/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Scripts/EKLibrary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Scripts/EKLibrary.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Socket.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameFolder/Scripts/Socket.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +95,7 @@
       <workItem from="1674471300811" duration="11525000" />
       <workItem from="1674648778152" duration="1747000" />
       <workItem from="1675084685553" duration="3964000" />
-      <workItem from="1675091962587" duration="2508000" />
+      <workItem from="1675091962587" duration="6082000" />
     </task>
     <servers />
   </component>

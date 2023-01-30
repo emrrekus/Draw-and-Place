@@ -51,14 +51,16 @@ public class Socket : MonoBehaviour
         }
         else if (col.CompareTag("Socket"))
         {
-            Debug.Log("Başka sokete Çarptı");
+            
             Settle = false;
+            General._GameManager.Lose();
         }
         else
         {
             if (!col.CompareTag(General._GameManager._LineCreates[LineIndex]._Tag))
             {
                 Settle = false;
+                General._GameManager.Lose();
             }
         }
     }
