@@ -47,7 +47,22 @@ public class GameManager : MonoBehaviour
         _TotalSocketCount= _ToplamObjectCount;
     }
 
-  
+    private void Start()
+    {
+        for (int i = 0; i < _entryObjects.Count; i++)
+        {
+            _entryObjects[i]._EntryObject.tag = "Entry" + (i + 1);
+            _sockets[i]._Socket.transform.position = _entryObjects[i]._SocketEntryPosition.transform.position;
+            _sockets[i]._SpriteRenderer.color = _sockets[i]._color;
+            _sockets[i]._Socket.LineIndex = i;
+            _sockets[i]._Socket._socketColor = _sockets[i]._SocketColor;
+
+            _sockets[i]._FinishNestSpriyeRenderer.gameObject.tag = _sockets[i]._SocketColor;
+            _sockets[i]._FinishNestSpriyeRenderer.color = _sockets[i]._color;
+            _sockets[i]._Socket._FinishNest= _sockets[i]._FinishNestCenter;
+        }
+    }
+        
 
     private void Begin()
     {
