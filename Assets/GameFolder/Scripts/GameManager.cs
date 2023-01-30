@@ -5,42 +5,20 @@ using EKLibrary;
 using UnityEditor;
 using UnityEngine;
 
-[Serializable]
-public class EntryObjects
-{
-    public GameObject _EntryObject;
-    public GameObject _SocketEntryPosition;
 
-
-}
-[Serializable]
-public class Sockets
-{
-    public Color _color;
-    public SpriteRenderer _SpriteRenderer;
-
-    [Header("----Soket Script İşlemleri")] 
-    public Socket _Socket;
-
-    public string _SocketColor;
-    public SpriteRenderer _FinishNestSpriyeRenderer;
-    public GameObject _FinishNestCenter;
-
-
-
-}
 
 public class GameManager : MonoBehaviour
 {
-    public LineCreate[] _LineCreates;
+    public List<LineCreate> _LineCreates;
     private General _general;
     [SerializeField] private int _ToplamObjectCount;
 
     private bool StartedTime;
     private int _TotalSocketCount;
 
-    [SerializeField] private List<EntryObjects> _entryObjects;
-    [SerializeField] private List<Sockets> _sockets;
+    [SerializeField] private List<LineRenderer> _lineRenderers;
+    [SerializeField] private List<OtomaticLevel> _otomaticLevels;
+    
     private void Awake()
     {
         _general = new General(this);
@@ -49,17 +27,27 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        for (int i = 0; i < _entryObjects.Count; i++)
+        for (int i = 0; i <_otomaticLevels[0]._entryObjects.Count; i++)
         {
-            _entryObjects[i]._EntryObject.tag = "Entry" + (i + 1);
-            _sockets[i]._Socket.transform.position = _entryObjects[i]._SocketEntryPosition.transform.position;
-            _sockets[i]._SpriteRenderer.color = _sockets[i]._color;
-            _sockets[i]._Socket.LineIndex = i;
-            _sockets[i]._Socket._socketColor = _sockets[i]._SocketColor;
+            _otomaticLevels[0]. _entryObjects[i]._EntryObject.tag = "Entry" + (i + 1);
+            _otomaticLevels[0]. _sockets[i]._Socket.transform.position = _otomaticLevels[0]._entryObjects[i]._SocketEntryPosition.transform.position;
+            _otomaticLevels[0]._sockets[i]._SpriteRenderer.color = _otomaticLevels[0]._sockets[i]._color;
+            _otomaticLevels[0]. _sockets[i]._Socket.LineIndex = i;
+            _otomaticLevels[0]. _sockets[i]._Socket._socketColor =_otomaticLevels[0]. _sockets[i]._SocketColor;
 
-            _sockets[i]._FinishNestSpriyeRenderer.gameObject.tag = _sockets[i]._SocketColor;
-            _sockets[i]._FinishNestSpriyeRenderer.color = _sockets[i]._color;
-            _sockets[i]._Socket._FinishNest= _sockets[i]._FinishNestCenter;
+            _otomaticLevels[0]. _sockets[i]._FinishNestSpriyeRenderer.gameObject.tag = _otomaticLevels[0]._sockets[i]._SocketColor;
+            _otomaticLevels[0]. _sockets[i]._FinishNestSpriyeRenderer.color = _otomaticLevels[0]._sockets[i]._color;
+            _otomaticLevels[0].  _sockets[i]._Socket._FinishNest= _otomaticLevels[0]._sockets[i]._FinishNestCenter;
+            
+            _lineRenderers[i].startColor= _otomaticLevels[0]._sockets[i]._color;
+            _lineRenderers[i].endColor=_otomaticLevels[0]. _sockets[i]._color;
+
+            LineCreate _Lc = gameObject.AddComponent<LineCreate>();
+            _Lc._LineRenderer = _lineRenderers[i];
+            _Lc._Socket = _otomaticLevels[0]._sockets[i]._Socket;
+            _Lc._Tag="Entry" + (i + 1);
+            
+            _LineCreates.Add(_Lc);
         }
     }
         

@@ -8,7 +8,7 @@ using UnityEngine;
 public class LineCreate : MonoBehaviour
 {
    public LineRenderer _LineRenderer;
-   public List<Vector2> HandPositionList;
+   public List<Vector2> HandPositionList = new();
    public Socket _Socket;
    public string _Tag;
 
