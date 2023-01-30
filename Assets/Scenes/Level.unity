@@ -947,7 +947,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 15ec98e2b1eb31e4bbc4e905e54cad31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1302,7 +1302,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 15ec98e2b1eb31e4bbc4e905e54cad31, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2840,8 +2840,36 @@ MonoBehaviour:
   _LineCreates: []
   _ToplamObjectCount: 3
   _otomaticLevels:
-  - _sockets: []
-    _lineRenderers: []
+  - _entryObjects:
+    - _EntryObject: {fileID: 1950965041}
+      _SocketEntryPosition: {fileID: 446170012}
+    - _EntryObject: {fileID: 432531395}
+      _SocketEntryPosition: {fileID: 634605725}
+    - _EntryObject: {fileID: 1981412002}
+      _SocketEntryPosition: {fileID: 560864672}
+    _sockets:
+    - _color: {r: 0.29781765, g: 0.9622642, b: 0.022694906, a: 1}
+      _SpriteRenderer: {fileID: 206754796}
+      _Socket: {fileID: 206754798}
+      _SocketColor: Green
+      _FinishNestSpriyeRenderer: {fileID: 997983644}
+      _FinishNestCenter: {fileID: 248574540}
+    - _color: {r: 0.01375042, g: 0.21064465, b: 0.9716981, a: 1}
+      _SpriteRenderer: {fileID: 2020139932}
+      _Socket: {fileID: 2020139931}
+      _SocketColor: Blue
+      _FinishNestSpriyeRenderer: {fileID: 1464879591}
+      _FinishNestCenter: {fileID: 89397936}
+    - _color: {r: 1, g: 0.41093177, b: 0, a: 1}
+      _SpriteRenderer: {fileID: 877890748}
+      _Socket: {fileID: 877890747}
+      _SocketColor: Orange
+      _FinishNestSpriyeRenderer: {fileID: 915138283}
+      _FinishNestCenter: {fileID: 354291994}
+    _lineRenderers:
+    - {fileID: 231569309}
+    - {fileID: 1802976183}
+    - {fileID: 250655622}
 --- !u!4 &1701914226
 Transform:
   m_ObjectHideFlags: 0
