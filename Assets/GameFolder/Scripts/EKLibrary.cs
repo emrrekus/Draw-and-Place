@@ -20,9 +20,13 @@ namespace EKLibrary
     {
         public List<EntryObjects> _entryObjects;
         public List<Sockets> _sockets;
+        public List<LineRenderer> _lineRenderers;
+        
+
 
 
     }
+    [Serializable]
     public class EntryObjects
     {
         public GameObject _EntryObject;

@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     private bool StartedTime;
     private int _TotalSocketCount;
 
-    [SerializeField] private List<LineRenderer> _lineRenderers;
+    
     [SerializeField] private List<OtomaticLevel> _otomaticLevels;
     
     private void Awake()
@@ -39,11 +39,11 @@ public class GameManager : MonoBehaviour
             _otomaticLevels[0]. _sockets[i]._FinishNestSpriyeRenderer.color = _otomaticLevels[0]._sockets[i]._color;
             _otomaticLevels[0].  _sockets[i]._Socket._FinishNest= _otomaticLevels[0]._sockets[i]._FinishNestCenter;
             
-            _lineRenderers[i].startColor= _otomaticLevels[0]._sockets[i]._color;
-            _lineRenderers[i].endColor=_otomaticLevels[0]. _sockets[i]._color;
+            _otomaticLevels[0]. _lineRenderers[i].startColor= _otomaticLevels[0]._sockets[i]._color;
+            _otomaticLevels[0].  _lineRenderers[i].endColor=_otomaticLevels[0]. _sockets[i]._color;
 
             LineCreate _Lc = gameObject.AddComponent<LineCreate>();
-            _Lc._LineRenderer = _lineRenderers[i];
+            _Lc._LineRenderer = _otomaticLevels[0]._lineRenderers[i];
             _Lc._Socket = _otomaticLevels[0]._sockets[i]._Socket;
             _Lc._Tag="Entry" + (i + 1);
             

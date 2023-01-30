@@ -2818,9 +2818,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1701914226}
   - component: {fileID: 1701914225}
-  - component: {fileID: 1701914224}
-  - component: {fileID: 1701914228}
-  - component: {fileID: 1701914227}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2828,22 +2825,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!114 &1701914224
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701914223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71477fb4ca6356540ba9bc0b09e44f9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _LineRenderer: {fileID: 231569309}
-  HandPositionList: []
-  _Socket: {fileID: 206754798}
-  _Tag: Entry1
 --- !u!114 &1701914225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2856,37 +2837,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63c6193cb4b3a394c9d17b4fa233b71e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _LineCreates:
-  - {fileID: 1701914224}
-  - {fileID: 1701914228}
-  - {fileID: 1701914227}
+  _LineCreates: []
   _ToplamObjectCount: 3
-  _entryObjects:
-  - _EntryObject: {fileID: 1950965041}
-    _SocketEntryPosition: {fileID: 446170012}
-  - _EntryObject: {fileID: 432531395}
-    _SocketEntryPosition: {fileID: 634605725}
-  - _EntryObject: {fileID: 1981412002}
-    _SocketEntryPosition: {fileID: 560864672}
-  _sockets:
-  - _color: {r: 0.56809354, g: 1, b: 0, a: 0}
-    _SpriteRenderer: {fileID: 206754796}
-    _Socket: {fileID: 206754798}
-    _SocketColor: Green
-    _FinishNestSpriyeRenderer: {fileID: 997983644}
-    _FinishNestCenter: {fileID: 248574540}
-  - _color: {r: 1, g: 0.36862782, b: 0, a: 0}
-    _SpriteRenderer: {fileID: 2020139932}
-    _Socket: {fileID: 2020139931}
-    _SocketColor: Orange
-    _FinishNestSpriyeRenderer: {fileID: 915138283}
-    _FinishNestCenter: {fileID: 354291994}
-  - _color: {r: 0.061918736, g: 0, b: 1, a: 0}
-    _SpriteRenderer: {fileID: 877890748}
-    _Socket: {fileID: 877890747}
-    _SocketColor: Blue
-    _FinishNestSpriyeRenderer: {fileID: 1464879591}
-    _FinishNestCenter: {fileID: 89397936}
+  _otomaticLevels:
+  - _sockets: []
+    _lineRenderers: []
 --- !u!4 &1701914226
 Transform:
   m_ObjectHideFlags: 0
@@ -2902,38 +2857,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1701914227
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701914223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71477fb4ca6356540ba9bc0b09e44f9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _LineRenderer: {fileID: 250655622}
-  HandPositionList: []
-  _Socket: {fileID: 0}
-  _Tag: Entry3
---- !u!114 &1701914228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1701914223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71477fb4ca6356540ba9bc0b09e44f9e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _LineRenderer: {fileID: 1802976183}
-  HandPositionList: []
-  _Socket: {fileID: 0}
-  _Tag: Entry2
 --- !u!1 &1765062030
 GameObject:
   m_ObjectHideFlags: 0
